@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Chat Widget</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            if (window.opener && window.opener.openCXGenieChatWidget) {
+                window.opener.openCXGenieChatWidget();
+                window.close();
+            } else {
+                document.body.innerHTML = '<p>Please return to the main page and try again.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
